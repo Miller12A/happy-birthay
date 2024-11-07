@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  font-size: 3.5em; /* Tamaño de fuente para pantallas grandes */
+  color: #d36ba0;
+  font-family: 'Poppins', sans-serif;  /* Tipografía más elegante */
+  font-weight: 700;  /* Fuente más gruesa */
+  margin: 10px 0;  /* Ajustamos el margen superior e inferior */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para más estilo */
+  letter-spacing: 2px;  /* Espaciado entre letras */
+  z-index: 10;
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2em; /* Reducir el tamaño del texto en móviles */
+    margin-top: 20px;  /* Agregar un pequeño margen superior */
+  }
+}
+
+/* Contenedor de imágenes */
+#heart-container {
+  position: relative;
+  width: 100vw;   /* Utilizar todo el ancho de la ventana */
+  height: calc(100vh - 80px);  /* Dejar espacio para el título */
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+/* Imágenes */
+#heart-container img {
+  position: absolute;
+  width: 150px;  /* Aumentamos el tamaño de las imágenes */
+  height: 150px;  /* Aumentamos el tamaño de las imágenes */
+  object-fit: cover;
+  opacity: 0;   /* Comienza invisible */
+  transform: scale(1);  /* Aseguramos que estén en su tamaño original */
+  transition: opacity 1s ease-in, transform 1s ease-in;  /* Transición suave */
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  #heart-container img {
+    width: 100px;  /* Reducimos el tamaño de las imágenes en móviles */
+    height: 100px;  /* Reducimos el tamaño de las imágenes en móviles */
+  }
+}
